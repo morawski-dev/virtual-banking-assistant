@@ -1,0 +1,31 @@
+[project]
+name = "virtual-banking-assistant"
+version = "0.1.0"
+description = "Virtual Banking Assistant"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pipecat-ai[websocket,silero,runner,local-smart-turn-v3,groq,openai,tracing,elevenlabs,openrouter]>=0.0.105",
+    "pipecat-ai-flows>=0.0.24",
+    "pipecatcloud>=0.2.20",
+    "opentelemetry-exporter-otlp-proto-http",
+    "babel>=2.14",
+    # RAG indexer (mock CB) — LlamaIndex + Qdrant
+    "llama-index-core>=0.12",
+    "llama-index-embeddings-openai>=0.3",
+    "llama-index-vector-stores-qdrant>=0.4",
+    "qdrant-client>=1.12",
+    # MCP client (used in flows/mcp_client.py to call the MCP server)
+    "mcp>=1.9",
+]
+
+[dependency-groups]
+dev = [
+    "pyright>=1.1.404,<2",
+    "ruff>=0.12.11,<1",
+]
+
+[tool.ruff]
+line-length = 100
+[tool.ruff.lint]
+select = ["I"]

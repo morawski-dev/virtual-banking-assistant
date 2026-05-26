@@ -1,0 +1,17 @@
+.idea/
+.claude/
+.env
+uv.lock
+docs/
+CLAUDE.md
+mock_cb/data/sent_offers.jsonl
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+
+# Audio recordings (created at runtime)
+recording_*.wav
+recordings/
