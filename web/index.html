@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bank Demo — Asystent czatowy</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="header-logo">
+        <!-- Bank logo (simplified) -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 38" width="34" height="34" aria-hidden="true">
+          <path fill="rgba(255,255,255,0.92)" d="
+            M19 2
+            C19 2 17.2 10.5 16.5 15.5
+            C11.5 16.2 3 18 3 18
+            C3 18 11.5 19.8 16.5 20.5
+            C17.2 25.5 19 34 19 34
+            C19 34 20.8 25.5 21.5 20.5
+            C26.5 19.8 35 18 35 18
+            C35 18 26.5 16.2 21.5 15.5
+            C20.8 10.5 19 2 19 2Z
+          "/>
+        </svg>
+        <span class="bank-name">Bank Demo</span>
+      </div>
+      <span class="channel-label">
+        <span class="status-dot" aria-hidden="true"></span>
+        Asystent czatowy (demo)
+      </span>
+    </div>
+  </header>
+
+  <main id="messages" role="log" aria-live="polite" aria-label="Historia rozmowy"></main>
+
+  <footer>
+    <div class="input-row">
+      <textarea
+        id="input"
+        rows="1"
+        placeholder="Napisz wiadomość… (Enter = wyślij, Shift+Enter = nowa linia)"
+        aria-label="Pole wiadomości"
+      ></textarea>
+      <button id="send" aria-label="Wyślij wiadomość">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="17" height="17" aria-hidden="true">
+          <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+        </svg>
+        Wyślij
+      </button>
+    </div>
+    <p class="disclaimer">Demo — nie przekazuj danych osobowych innych niż testowe.</p>
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
