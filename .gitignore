@@ -1,7 +1,6 @@
 .idea/
 .claude/
 .env
-uv.lock
 docs/
 CLAUDE.md
 mock_cb/data/sent_offers.jsonl
