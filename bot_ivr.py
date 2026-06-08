@@ -123,24 +123,6 @@ async def run_bot(
         api_key=os.getenv("OPENAI_API_KEY"),
     )
 
-    # llm = OpenRouterLLMService(
-    #     api_key=os.getenv("OPENROUTER_API_KEY"),
-    #     model="google/gemini-3.1-flash-lite-preview",
-    # )
-
-    # qwen/qwen3.5-27b
-    # google/gemma-4-31b-it
-    # mistralai/mistral-small-2603
-    # meta-llama/llama-3.3-70b-instruct
-    # anthropic/claude-sonnet-4.5
-    # google/gemini-3.1-flash-lite-preview
-    # OpenAI gpt-4.1
-
-    # llm = OLLamaLLMService(
-    #     base_url="http://18.153.196.239:11434/v1",
-    #     model="llama3.3:70b",
-    # )
-
     stt = GroqSTTService(
         api_key=os.getenv("GROQ_API_KEY"),
         settings=GroqSTTService.Settings(
@@ -159,39 +141,6 @@ async def run_bot(
         ),
         push_silence_after_stop=testing,
     )
-
-    # tts = ElevenLabsHttpTTSService(
-    #     api_key=os.getenv("ELEVENLABS_API_KEY"),
-    #     aiohttp_session=aiohttp.ClientSession(),
-    #     settings=ElevenLabsHttpTTSService.Settings(
-    #         voice="N0GCuK2B0qwWozQNTS8F",
-    #         model="eleven_flash_v2_5",
-    #         language=Language.PL,
-    #     ),
-    # )
-
-    # tts = ElevenLabsTTSService(
-    #     api_key=os.getenv("ELEVENLABS_API_KEY"),
-    #     settings=ElevenLabsTTSService.Settings(
-    #         # voice="N0GCuK2B0qwWozQNTS8F", Magdalena
-    #         # Adam
-    #         voice="B9cNwbQXN3s6l3nU6fqz",
-    #         model="eleven_multilingual_v2",
-    #         language=Language.PL,
-    #         stability=0.7,
-    #         similarity_boost=0.8,
-    #         speed=1.1,
-    #     ),
-    # )
-
-    # tts = ElevenLabsTTSService(
-    #     api_key=os.getenv("ELEVENLABS_API_KEY"),
-    #     settings=ElevenLabsTTSService.Settings(
-    #         voice="V5GZ9rfeV9jjKZE5NkT7",             # Adam
-    #         model="eleven_flash_v2_5",
-    #         language=Language.PL,
-    #     ),
-    # )
 
     context = LLMContext()
     context_aggregator = LLMContextAggregatorPair(
